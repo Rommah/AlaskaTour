@@ -1,0 +1,321 @@
+.features {
+	border-top: 4px solid #bee4e7;
+	padding-top: 3em;
+	display: flex;
+	padding-bottom: 4em;
+
+	&__whyUs {
+		width: 35%;
+		margin-right: 5%;
+
+		.features__heading {
+			.headLine;
+			margin-bottom: -0.4em;
+		}
+		.features__item {
+			display: flex;
+			align-items: center;
+			margin: 0;
+			padding: 1.1em 0;
+			border-bottom: 1px solid hsla(180, 30%, 40%, 0.3);
+			
+			.whyUs__text {
+				.ubun;
+				font-size: 1.5em;
+				margin-left: 1.2em;
+				line-height: 1.5;
+				color: #222;
+			}
+		}
+		.features__link {
+			margin-top: 1.2em;
+			display: inline-block;
+			font-size: 1.1em;
+			color: @aqua;
+			transition: 0.3s cubic-bezier(1, -0.54, 0, 1.65);
+			&:hover {
+				transform-origin: left bottom;
+				transform: skewX(-15deg);
+				color: @blue;
+				text-shadow: 1px 1px 1px #ccc;
+			}
+		}
+	} // .whyUs
+
+	.features-advice {
+		flex-grow: 1;
+		&__heading {
+			.headLine;
+		}
+		&__background {
+			height: 296px;
+			background-color: green;
+			background-image: 
+			 // linear-gradient(white, transparent 70%),
+			 linear-gradient(to right, white 30%, transparent 64%, transparent 70%, white ),
+			 url(../images/dest/Index-feature-back.png),
+			 linear-gradient(blue, red);
+		}
+		&__slider-wrapper {
+			overflow: hidden;
+			width: 550px;
+
+			.features-advice__slider {
+				// background-color: #fff;
+				height: 160px;
+				.center;
+				position: relative;
+				// overflow: hidden;
+
+				.advice-slider__item {
+					position: absolute;
+					left: 100%;
+					width: 550px;
+					padding: 2em 4em;
+					text-align: center;
+					color: #555;
+
+					.advice-slider__question {
+						.meri;
+						font-size: 1.6em;
+						line-height: 1.6;
+						font-style: italic;
+					}
+					
+					.advice-slider__answer {
+						position: absolute;
+						z-index: 2;
+						bottom: -1.1em;
+						right: 1.3em;
+						background-image: 
+						 linear-gradient(fadeout(darken(@aqua, 13%), 0%), 
+							fadeout(@aqua, 40%));
+						// background-image: linear-gradient(darken(@aqua, 13%), aplha(@aqua, 0.8));
+						// opacity: 0.8;
+						// background-color: darken(lime, 13%);
+						text-transform: uppercase;
+						.white;
+						.ubun;
+						font-size: 1.4em;
+						padding: .3em 2em;
+						transition: 0.3s;
+						.text {
+							display: inline-block;
+							transform-origin: left bottom;
+							transition: 0.2s;
+						}
+						&::after {
+							content: "";
+							width: 30px;
+							height: 0;
+							position: absolute;
+							left: 100%;
+							top: 0;
+							// border-top: 0px solid darken(lime, 10%);
+							border-right: 20px solid transparent;
+							border-left: 20px solid darken(@aqua, 13%);
+							border-bottom: 9px solid transparent;
+						}
+						&:hover {
+							text-shadow: -1px -1px 2px #888;
+							box-shadow: -1px -1px 3px #999;
+							background-image: linear-gradient(darken(@aqua, 15%), 
+								lighten(@aqua, 11%));
+							opacity: 0.9;
+							.text {
+								transform: skewX(-15deg);
+							}
+						}
+
+					} //.advice-slider__answer
+
+				} // .advice-slider__item
+				.advice-slider__arrow {
+					.krug;
+					.aquaB;
+					width: 40px;
+					height: 40px;
+					display: inline-block;
+					cursor: pointer;
+					position: absolute;
+					transition: 0.3s;
+					.center;
+					opacity: .7;
+					&::before,
+					&::after {
+						content: "";
+						position: absolute;
+						display: block;
+					}
+					&::before {
+						width: 18px;
+						height: 18px;
+						background-color: #fff;
+						transform: translateX(1px) rotate(45deg);
+					}
+					&::after {
+						width: 15px;
+						height: 15px;
+						.aquaB;
+						transform: translateX(6px) rotate(45deg);
+					}
+					&:hover {
+						box-shadow: 3px 3px 5px #999;
+						opacity: 1;
+						&::before {
+							box-shadow: -1px 1px 3px #ccc;
+						}
+						&::after {
+							box-shadow: inset 1px -1px 3px #888;
+						}
+					}
+					&:active {
+						// .blueB;
+						transition: 0;
+						box-shadow: none;
+						&::before {
+							box-shadow: inset 3px -3px 3px #ccc;
+						}
+						&::after {
+							box-shadow:  -1px 1px 2px #777;
+							// .blueB;
+						}
+					}
+				} //.advice-slider__arrow
+				.advice-slider__arrow--left {
+					left: 1em;
+				}
+				.advice-slider__arrow--right {
+					right: 1em;
+					transform: rotate(180deg);
+				}
+				
+			} // .slider
+
+			.features-advice__toggles-wrapper {
+				.center;
+				width: 500px;
+				padding-top: 1.6em;
+				transform: translate(-2.5em, -1.4em);
+
+				.features-advice__toggle {
+					.center;
+					width: 43px;
+					height: 32px;
+					position: relative;
+					cursor: pointer;
+					transition: 0.3s;
+
+					&:before {
+						content: "";
+						.krug(16, @aqua);
+						opacity: 0.6;
+						transition: 0.3s;
+					}
+
+					&:hover {
+						&:before {
+							opacity: 1;
+						}
+					}
+				} //.features-advice__toggle
+				
+				.features-advice__toggle--current {
+					&::before {
+						.blueB;	
+						opacity: 1;
+					}
+				}
+
+			} // .toggles-wrapper			
+
+		} // .slider-wrapper
+
+		&__link-wrapper {
+			display: flex;
+			justify-content: flex-end;
+			padding-top: 0.8em;
+			.ubun;
+			font-size: 1.2em;
+
+			.features-advice__further-link {
+				color: @aqua;
+				text-transform: capitalize;
+
+				&:first-child {
+					margin-right: 1em;
+					padding-right: 1em;
+					border-right: 1px solid hsla(180, 30%, 40%, 0.3);
+				}
+
+				&:hover {
+					color: @blue;
+				}
+			}
+		} // .link-wrapper
+
+	} // .features-advice 
+
+
+} //features (whole block)
+
+// .advice-slider:hover {
+	// .advice-slider__item--shown {
+	// 	animation: nextSlideShow 1s forwards;
+	// }
+	// .advice-slider__item--gone {
+	// 	animation: hideCurrentSlide 1s forwards;
+	// }
+// }
+
+
+.hideSlideToLeft {
+	animation: hideSlideToLeft 1s forwards;
+}
+.bringFromRightSide {
+	animation: bringFromRightSide 1s forwards;
+}
+.hideSlideToRight {
+	animation: hideSlideToRight 1s forwards;
+}
+.bringFromLeftSide {
+	animation: bringFromLeftSide 1s forwards;
+}
+
+
+@keyframes hideSlideToLeft {
+	from {
+		left: 0%;
+	}
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes bringFromRightSide {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes hideSlideToRight {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes bringFromLeftSide {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+// }

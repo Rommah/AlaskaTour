@@ -1,0 +1,107 @@
+.video__slider-wrapper {
+	position: relative;
+	.video__slider-item {
+		position: relative;
+		.center;
+		// max-height: 100vh;
+		display: none;
+		.slider-video {
+			width: 100%;
+		max-height: 100vh;
+			
+		}
+		.slider-text {
+			position: absolute;
+			text-align: center;
+			.slider__head {
+				.robotS;
+				.white;
+				font-size: 4.5em;
+				margin: 0;
+				opacity: 0;
+				animation: text-video 1s 0.5s forwards;
+			}
+			.slider__description {
+				.robotS;
+				.white;
+				font-size: 1.8em;
+				margin: 0;
+				margin-bottom: 1em;
+				opacity: 0;
+				animation: text-video 1s 1.5s forwards;
+			}
+			.slider__link {
+				.robot5;
+				color: rgb(173, 227, 108);
+				font-size: .95em;
+				padding: .6em 1.5em;
+				background-color: rgba(0, 0, 0, 0.75);
+				border-radius: 1.3em;
+				margin-top: 2.5em;
+				background-image: radial-gradient(@blue 55%, transparent 90%);
+				background-position: -00% 00%;
+				background-size: 0%;
+				background-repeat: no-repeat;
+				transition: 0.5s;
+				opacity: 0;
+				animation: text-video 1s 2.5s forwards;
+				&--blue{
+					color: rgb(85, 209, 240);
+				}
+				&:hover {
+					background-position: 50% 50%;
+					background-size: 200%;
+				}
+			}
+		}
+	}
+	.video__slider-item--show{
+		display: flex;
+	}
+	.video__toggle-item {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		background-color: hsla(0,0,0,0.3);
+		position: absolute;
+		top: 50%;
+		left: 2em;
+		transform: translateY(-50%);
+		cursor: pointer;
+		opacity: 0.8;
+		.center;
+		transition: 0.6s;
+		background-image: radial-gradient(@blue 45%, transparent 85%);
+		background-position: -100% 100%;
+		background-size: 0px 0px;
+		background-repeat: no-repeat;
+		&:before{
+			content: '';
+			border: 2px solid #fff;
+			border-right: none;
+			border-top: none;
+			width: 15px;
+			height: 15px;
+			transform: rotate(45deg);
+		}
+
+		&:hover{
+			background-position: 50% 50%;
+			background-size: 75px 75px;
+		}
+	}
+	.video__toggle-item--right{
+		right: 2em;
+		left: auto;
+		transform: translateY(-50%) rotate(180deg);
+	}
+}
+
+@keyframes text-video {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.8;
+	}
+}

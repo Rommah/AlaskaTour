@@ -1,0 +1,35 @@
+header.header
+	section.__logotype
+		._logo-wrapper.wrapper 
+			a(href="#").logo__link
+				img._img(src='images/dest/logo.png' alt='Логотип')
+	
+	nav.__links
+		._links-list.wrapper
+			a._link-item(href="#") Направления
+			a._link-item(href="#") Каникулы
+			a._link-item(href="#") Жильё
+			a._link-item(href="#") Список дел
+			a._link-item(href="#") Транспорт
+			a._link-item(href="#") Круизы
+			a._link-item(href="#") Планирование поездки
+
+
+section.header__contacts-wrapper
+	.header__logo-contacts.wrapper
+		a.contacts__link(href="#")
+			+svg('#phone', 'contacts__icon', '24')
+			| 800-208-0200
+		a.contacts__link(href="#")
+			+svg('#book', 'contacts__icon', '38', '31')
+			|брошюра
+		a.contacts__link(href="#")
+			+svg('#letter', 'contacts__icon', '31')
+			|контакт
+		a.contacts__link(href="#")
+			+svg('#search', 'contacts__icon', '28')
+			|
+		a.contacts__link.-cart(href="#")
+			+svg('#suitcase', 'contacts__icon', '31')
+			|Моя поездка #[span.in-cart (0)]
+

@@ -1,0 +1,149 @@
+extends template/template.pug
+	
+
+block title
+	title Аляска - Главная страница
+	meta(name='description', content='Туры на Аляску, направления, каникулы, жильё')
+	//- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+	
+block main
+	h1.visually-hidden Туры Аляска
+	section.video__slider
+		.video__slider-wrapper
+			.video__slider-item.-show
+				video.slider-video(src='video/bears.mp4' autoplay loop muted preload="auto")
+				.slider-text
+					h2.slider__head Парад дикой жизни
+					p.slider__description Узнай и множестве экосистем и зон обитания  
+					a.slider__link(href="#") Обзор тура наблюдения медведей >
+			.video__slider-item
+				video.slider-video(src='video/nothern-light.mp4' autoplay loop muted preload="auto")
+				.slider-text
+					h2.slider__head Люминесцентное шоу
+					p.slider__description Раскрась небо яркими цветами
+					a.slider__link(href="#") Обзор тура Северного сияния >
+			.video__slider-item
+				video.slider-video(src='video/glacier-slide.mp4' autoplay loop muted preload="auto")
+				.slider-text
+					h2.slider__head Момент величия
+					p.slider__description Испытай зрелище откола ледников
+					a.slider__link.-blue(href="#") Обзор тура на ледники >
+			.video__toggles-list
+				.video__toggle-item.-left
+				.video__toggle-item.-right
+
+
+	section.proposal
+		//- .proposal__top-line
+		.proposal__wrapper.wrapper
+
+			.proposal__left
+				h2.proposal__left-head Добро пожаловать
+				p.proposal__left-description От высоких ледников #[a(href="#").left-description__link Кенай-фьордов] до сурового величия #[a(href="#").left-description__link Национального парка Денали] - ваш #[a(href="#").left-description__link отпуск на Аляске] ждет вас! Позвольте нам помочь вам выбрать идеальное сочетание вариантов #[a(href="#").left-description__link проживания] , #[a(href="#").left-description__link занятий] и #[a(href="#").left-description__link транспорта] с учетом ваших конкретных потребностей. #[a(href="#").left-description__link НАЧАТЬ>]
+
+			.proposal__right
+				._text
+					.proposal__right__text-top
+						p.text-top__free Бесплатно  
+						p.text-top__guide Карта и справочник #[br]Аляски 
+					.proposal__right__text-bottom
+						a(href="#").text-bottom__link Получить> 
+						p.text-bottom__description Бумажную или электронную версию
+				a(href="#")._image-link
+					._image-guide-bg
+		//- .proposal__bottom-line
+
+	section.tour-variants
+		.tour.wrapper
+			h2._head Начните своё путешествие
+			._list
+				a._item-link(href="#")
+					h3._item-head Популярные пакеты
+					._flip-picture-wrapper
+						p.tour__item-description Исследуйте отпуск на Аляске, включая поездки на поезде и автобусе, пакеты для самостоятельного вождения и туры с полным сопровождением.
+						.tour__item-picture
+				a._item-link(href="#")
+					h3._item-head Места для посещения
+					._flip-picture-wrapper
+						p.tour__item-description Большинство наших гостей посетят парк Денали и Сьюард. Позвольте показать вам еще несколько наших любимых мест.
+						.tour__item-picture
+				a._item-link(href="#")
+					h3._item-head Где остановиться
+					._flip-picture-wrapper
+						p.tour__item-description У нас есть множество вариантов, включая отели с полным спектром услуг, уютные домики, частные домики и уединенные места в дикой природе.
+						.tour__item-picture
+				a._item-link(href="#")
+					h3._item-head Чем заняться
+					._flip-picture-wrapper
+						p.tour__item-description На Аляске вас ждут грандиозные приключения. Живописные полеты, катание на собачьих упряжках, круизы по ледникам, походы, рафтинг и многое другое.
+						.tour__item-picture
+				a._item-link(href="#")
+					h3._item-head Транспорт
+					._flip-picture-wrapper
+						p.tour__item-description Передвигаться легко с помощью железной дороги Аляски, частных купольных поездов, роскошных автобусов и арендованных автомобилей. 
+						.tour__item-picture
+				a._item-link(href="#")
+					h3._item-head Туристические предложения
+					._flip-picture-wrapper
+						p.tour__item-description Позвольте нам сэкономить вам 500 долларов или больше на пару с мгновенной экономией, скидками, специальными предложениями и нашей гарантией низкой цены. 
+						.tour__item-picture
+
+	section.features.wrapper
+		article._whyUs
+			h3._heading Почему мы
+			p._item
+				img.whyUs__image(src="images/dest/trip-advisor.jpg", alt="Tripadise")
+				span.whyUs__text 900+ 5-звездочных отзывов на TripAdvisor.
+			p._item
+				img.whyUs__image(src="images/dest/bbb.jpg", alt="BBB")
+				span.whyUs__text Рейтинг А + на BBB Аляски.
+			p._item
+				img.whyUs__image(src="images/dest/suitcase.png", alt="suitcase")
+				span.whyUs__text 250 000+ поездок, запланированных за последние 25 лет.
+			a._link(href="#") Ещё 7 причин >
+	
+		article.features-advice
+			h3._heading Совет эксперта
+			._background
+				._slider-wrapper
+					.advice-slider._slider
+						._item
+							p._question "В какое время года лучше всего посещать Аляску?"
+							a._answer(href="#") #[span.text Ответ >]
+						._item
+							p._question "Что взять с собой на каникулы на Аляске?"
+							a._answer(href="#") Ответ >
+						._item
+							p._question "Как лучше всего увидеть Денали?"
+							a._answer(href="#") Ответ >
+						._item
+							p._question "Какая будет погода на Аляске?"
+							a._answer(href="#") Ответ >
+						._item
+							p._question "Есть ли поезд от Сьюарда до Денали-парка?"
+
+							a._answer(href="#") #[span Ответ >]
+						//- ._arrows-wrapper
+						span.advice-slider__arrow.-left
+						span.advice-slider__arrow.-right
+					._toggles-wrapper
+						span._toggle
+						span._toggle
+						span._toggle
+						span._toggle
+						span._toggle
+			._link-wrapper
+				a._further-link(href="#") Лучшие советы и часто задаваемые вопросы> 
+				a._further-link(href="#") Познакомьтесь с командой>
+	
+	
+
+
+
+
+
+

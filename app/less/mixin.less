@@ -1,0 +1,153 @@
+.font(@fontFamily; @weight: normal; @fontName: @fontFamily@weight; @style: normal; @path: "") {
+  font-family: '@{fontFamily}';
+  font-display: swap;
+  src: local('@{fontFamily}'),
+    url('../font/@{path}@{fontName}.woff2') format('woff2'),
+    url('../font/@{path}@{fontName}.woff') format('woff'),
+    url('../font/@{path}@{fontName}.eot') format("eot"),
+    url('../font/@{path}@{fontName}.svg') format('svg'),
+    url('../font/@{path}@{fontName}.eot#iefix') format('embedded-opentype'),
+    url('../font/@{path}@{fontName}.ttf') format('truetype');
+  font-weight: @weight;
+  font-style: @style;
+}
+
+.mons() {
+  font-family: Montserrat, Arial, sans-serif;
+}
+.monsB() {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+}
+.mons9() {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 900;
+}
+.robotS(){
+  font-family: 'Roboto Slab', 'Times new roman', serif;
+}
+.robot(){
+  font-family: 'Roboto', 'Times new roman', serif;
+}
+.robot5(){
+  font-family: 'Roboto', 'Times new roman', serif;
+  font-weight: 500;
+}
+.meri(){
+  font-family: 'Merriweather', 'Times new roman', serif;
+}
+.meri7(){
+  font-family: 'Merriweather', 'Times new roman', serif;
+  font-weight: 700;
+}
+.ubun(){
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-weight: 300;
+}
+.ubunI(){
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+.ubun7(){
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-weight: 700;
+}
+.ubun7i(){
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.krug() {
+  border-radius: 50%;
+}
+.krug(@diametr, @color) {
+  border-radius: 50%;
+  width: @diametr + 0px;
+  height: @diametr + 0px;
+  background-color: @color;
+}
+.cover(){
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white(){
+  color: #fff;
+}
+
+.aquaB(){
+  background-color: @aqua;
+}
+.blueB(){
+  background-color: @blue;
+}
+.orangeB(){
+  background-color: @orange;
+}
+.greenB(){
+  background-color: @green;
+}
+.whiteB(){
+  background-color: #fff;
+}
+
+.head() {
+  .mons9;
+  color: @blue;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+.headLine() {
+  .mons9;
+  color: @blue;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  text-shadow: 1px 1px 2px @aqua,
+    ;
+  .center;
+  &:before,
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    flex-grow: 1;
+    background-color: fadeout(@aqua, 70%);
+    // background-color: rgba(19,119,174,.2);
+    margin-right: 0.4em;
+  }
+  &:after {
+    margin-left: 0.4em;
+  }
+}
+
+
+.grad(@color1, @color2, @direction: bottom){
+  background-image: linear-gradient(to @direction, @color1, @color2);
+}
+.gradS(@color1; @color2; ...){
+  background-image: linear-gradient(@color1, @color2, );
+}
+
+.circButton(@color1: @blue, @color2: transparent, @size1: 52, @size2: 95) {
+  background-image: radial-gradient(@color1 @size1+0%, @color2 @size2+0%);
+  background-position: -100% 100%;
+  background-size: 0px 0px;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.btn-hover() {
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+

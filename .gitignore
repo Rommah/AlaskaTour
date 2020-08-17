@@ -1,0 +1,6 @@
+
+app/images/dest/
+app/images/src/
+node_modules/
+/*.url
+ignore/

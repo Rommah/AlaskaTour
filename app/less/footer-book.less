@@ -1,0 +1,301 @@
+.book-wrapper {
+	background-image: url(../images/dest/footer-bookBg.jpg);
+	.cover;
+	background-position: top center;
+
+	.book {
+		.white;
+		.ubun;
+		padding: 6em 0 3em;
+
+		&__heading {
+			.headLine;
+			.white;
+		}
+
+		&__choise-wrapper {
+			.center;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+
+} //- .book-wrapper
+
+
+//- Иконки выбора:
+.choise {
+	display: flex;
+	// flex-wrap: wrap;
+
+	&__list {
+		display: flex;
+		.choise__item {
+			.center;
+			flex-direction: column;
+			border: 1px solid #fff;
+			min-width: 5em;
+			min-height: 5em;
+			background-color: hsla(0, 0%, 100%, 0.2);
+			border-radius: 0.3em;
+			margin: 0.6em;
+			padding: 5px;
+			cursor: pointer;
+
+		    .circButton();
+
+		    &:hover {
+			    .btn-hover;
+			    transform: scale(1.05);
+			    text-shadow: 1px 1px 2px #333;
+			    box-shadow: 3px 3px 3px darken(#1ea558, 12%);
+
+			}
+			&:focus {
+			    outline: none;
+
+			}
+			&:active {
+				transition: 0.1s;
+				transform: scale(0.95);
+				box-shadow: 0px 0px 0px darken(#1ea558, 12%);
+				background-size: 150% 150%;
+				
+			}
+
+			.choise__type-icon {
+				width: 2.5em;
+			}
+
+			.choise__type-description {
+				text-transform: uppercase;
+				margin: 0;
+				margin-top: 0.5em;
+				font-size: 0.95em;
+			}
+		} // .choise__item
+
+		.choise__item--active {
+			padding: 4px;
+			// padding: calc(0.6em - 2px);
+			font-weight: bold;
+			border-width: 2px;
+			background-color: @aqua;
+			text-shadow: 1px 1px 1px #333;
+			box-shadow: 0 0 12px darken(#24aa5b, 20%),
+				inset 0 0 2px #000;
+				// inset 0 0 2px darken(@blue, 30%);
+			.circButton;
+			.btn-hover;
+			&:hover {
+				transform: scale(1);
+				text-shadow: 1px 1px 1px #333;
+				box-shadow: 0 0 12px darken(#24aa5b, 20%),
+					inset 0 0 2px #000;
+			}
+			.choise__type-icon {
+			}
+		}
+
+	}
+}
+
+
+.choise-form {
+	align-self: stretch;
+	flex-grow: 1;
+	.center;
+	justify-content: start;
+	margin-left: 2em;
+	padding-left: 2em;
+	border-left: 1px solid hsla(0, 0%, 100%, 0.2);
+	perspective: 400px;
+	transform-style: preserve-3d;
+
+	&__fieldset {
+		display: none;
+		// flex-wrap: wrap;
+		// // justify-content: space-between;
+		// align-items: flex-end;
+		flex-grow: 1;
+		flex-shrink: 0;
+		grid-gap: 0.5em;
+		// grid-template-columns: repeat(auto-fill, minmax(min-content, 1fr));
+		// grid-template-columns: repeat(auto-fill, minmax(auto, auto));
+		grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+		
+		.choise-form__input-field {
+			// width: 40%;
+			display: flex;
+			align-items: center;
+			color: #000;
+			border-radius: 0.3em;
+			background-color: #eee;
+			.grad(@aqua, transparent);
+			// .grad(#1ba15a, fadeout(#1ba15a, 70%));
+			box-shadow: inset 2px 3px 6px #777,
+				2px 3px 3px #555,
+				inset -3px -3px 5px #fff;
+			text-shadow: 1px 1px 2px #999;
+
+			background-size: 100% 00%;
+			background-repeat: no-repeat;
+
+			border: 2px solid #fff;
+			border-bottom-color: #aaa;
+			border-right-color: #aaa;
+			padding: 0.5em;
+			position: relative;
+			cursor: pointer;
+			transition: 0.3s;
+
+			&:hover {
+				background-size: 100% 100%;
+				text-shadow: -1px -1px 2px #ddd;
+			}
+			&:focus {
+				outline: none;
+				background-size: 100% 00%;
+				ul {
+					display: block;
+					animation: listAppearance 0.75s;
+				}
+			}
+
+			ul {
+				display: none;
+				position: absolute;
+				z-index: 2;
+				top: calc(100% + 3px);
+				background-color: #fff;
+				width: 100%;
+				margin-left: -0.6em;
+				transform-origin: bottom center;
+				box-shadow: 5px 5px 10px #555;
+
+				li {
+					border-top: 1px solid white;
+					border-bottom: 1px solid fadeout(darken(white, 40%), 30%);
+					padding: 0.3em 1em;
+					cursor: pointer;
+					transition: 0.2s;
+					text-shadow: 0 -1px 2px #fff;
+					background-image: linear-gradient(darken(white, 35%) 5%, darken(white, 25%) 23%, 
+						darken(white, 15%), darken(white, 15%), 
+						darken(white, 6%) 76%, darken(white, 1%) 94%);
+
+					&:hover {
+						transform: scale(1.03, 1.06);
+						background-image: linear-gradient(white, darken(white, 30%));
+						box-shadow: 2px 2px 4px #888;
+						border-bottom-color: #777;
+						text-shadow: 0px 1px 1px #fff,
+							0px -1px 1px hsla(0, 100%, 5%, 0.7);
+					}
+				}
+
+			}
+		}
+		.choise-form__label {
+			width: 12em;
+			margin: 0.5em;
+
+		}
+	}
+	&__fieldset--shown {
+		display: grid;
+	}
+	.choise-form__submit-button {
+		.center;
+		.white;
+		border: 1px solid @aqua;
+		background-color: hsla(0, 0%, 100%, 0.2);
+		.grad(lighten(#1ba15a, 25%), @blue);
+		background-repeat: no-repeat;
+		// background-size: 100% 0%;
+		background-position: 100% 0;
+		text-shadow: 1px 2px 2px #333;
+		box-shadow: 2px 2px 8px #333;
+		border-bottom-color: darken(@blue, 5%);
+		border-right-color: fadeout(@blue, 40%);
+		margin: 0.5em;
+		font-size: 1em;
+		padding: .3em 0.8em;
+		border-radius: .3em;
+		transition: 0.3s;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			.grad(lighten(#1ba15a, 30%), darken(@blue, 2%));
+			text-shadow: 1px 2px 2px #222;
+			box-shadow: 4px 4px 14px #333;
+			transform: scale(1.02, 1);
+
+			outline: none;
+		}
+		&:active {
+			color: #333;
+			.grad(desaturate(lighten(#1ba15a, 30%),60%), darken(@blue, 6%));
+			text-shadow: 1px 1px 1px #bbb;
+			box-shadow: 0px 0px 0px #333,
+				inset 0px 1px 4px #777,
+				inset 0px -2px 3px darken(@blue, 12%);
+			transform: scale(0.98, 1);
+			border-color: #aaa;
+			// border-color: darken(@blue, 10%);
+			border-top-color: #555;
+			border-left-color: #555;
+			transition: 0.1s;
+		}
+	}
+}
+
+
+//- надпись внизу блока 
+.book__notice {
+	.center;
+	margin-top: 2em;
+	font-size: 1.1em;
+
+	.notice__link {
+		color: @yellow;
+	}
+}
+
+@keyframes listAppearance {
+	0% {
+
+		top: 50%;
+	}
+	// 10% {
+	// 	top: 150%;
+	// }
+	// 20% {
+	// 	top: 60%;
+	// }
+	30% {
+		top: 140%;
+	}
+	50% {
+		top: 70%;
+	}
+	// 50% {
+	// 	top: 130%;
+	// }
+	// 60% {
+	// 	top: 80%;
+	// }
+	65% {
+		top: 120%;
+	}
+	80% {
+		top: 90%;
+	}
+	90% {
+		top: 110%;
+	}
+	100% {
+		top: 100%;
+	}
+}
