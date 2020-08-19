@@ -130,64 +130,16 @@
 					} //.advice-slider__answer
 
 				} // .advice-slider__item
+
 				.advice-slider__arrow {
-					.krug;
-					.aquaB;
-					width: 40px;
-					height: 40px;
-					display: inline-block;
-					cursor: pointer;
-					position: absolute;
-					transition: 0.3s;
-					.center;
-					opacity: .7;
-					&::before,
-					&::after {
-						content: "";
-						position: absolute;
-						display: block;
-					}
-					&::before {
-						width: 18px;
-						height: 18px;
-						background-color: #fff;
-						transform: translateX(1px) rotate(45deg);
-					}
-					&::after {
-						width: 15px;
-						height: 15px;
-						.aquaB;
-						transform: translateX(6px) rotate(45deg);
-					}
-					&:hover {
-						box-shadow: 3px 3px 5px #999;
-						opacity: 1;
-						&::before {
-							box-shadow: -1px 1px 3px #ccc;
-						}
-						&::after {
-							box-shadow: inset 1px -1px 3px #888;
-						}
-					}
-					&:active {
-						// .blueB;
-						transition: 0;
-						box-shadow: none;
-						&::before {
-							box-shadow: inset 3px -3px 3px #ccc;
-						}
-						&::after {
-							box-shadow:  -1px 1px 2px #777;
-							// .blueB;
-						}
-					}
-				} //.advice-slider__arrow
+					.arrow(3em);
+				} 
 				.advice-slider__arrow--left {
 					left: 1em;
+					.reflect-arrow;
 				}
 				.advice-slider__arrow--right {
 					right: 1em;
-					transform: rotate(180deg);
 				}
 				
 			} // .slider
@@ -200,15 +152,15 @@
 
 				.features-advice__toggle {
 					.center;
-					width: 43px;
-					height: 32px;
+					width: 2.5em;
+					height: 2.5em;
 					position: relative;
 					cursor: pointer;
 					transition: 0.3s;
 
 					&:before {
 						content: "";
-						.krug(16, @aqua);
+						.krug(1em, @aqua);
 						opacity: 0.6;
 						transition: 0.3s;
 					}
@@ -259,14 +211,6 @@
 
 } //features (whole block)
 
-// .advice-slider:hover {
-	// .advice-slider__item--shown {
-	// 	animation: nextSlideShow 1s forwards;
-	// }
-	// .advice-slider__item--gone {
-	// 	animation: hideCurrentSlide 1s forwards;
-	// }
-// }
 
 
 .hideSlideToLeft {

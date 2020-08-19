@@ -64,8 +64,8 @@
 }
 .krug(@diametr, @color) {
   border-radius: 50%;
-  width: @diametr + 0px;
-  height: @diametr + 0px;
+  width: @diametr;
+  height: @diametr;
   background-color: @color;
 }
 .cover(){
@@ -150,4 +150,67 @@
   background-position: 50% 50%;
   background-size: 100% 100%;
 }
+
+
+    .reflect-arrow() {
+      transform: scale(-1, 1);
+      // left: -0.5em;
+      // transition: 0s;
+
+      &:hover {
+        // transition: 0s;
+        transform: scale(-1.08, 1.08) ;
+      }
+
+      &:active {
+        transform: scale(-1, 1);
+      }
+    }
+
+.arrow(@buttonWidth: 2.8em, @svgWidth: @buttonWidth / 1.9) {
+      position: absolute;
+      // right: -0.5em;
+      .krug(@buttonWidth, @blue);
+      .center;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 1px 1px 3px #555;
+      background-image: radial-gradient(at 35% 35%, lighten(@aqua, 40%), 
+        @aqua, @blue, darken(@blue, 30%));
+
+      svg {
+        width: @svgWidth;
+        fill: white;
+        filter: drop-shadow(1px 1px 1px #888);
+
+      }
+
+      &:hover {
+        transform: scale(1.08);
+        box-shadow: 2px 2px 5px #333;
+        background-image: radial-gradient(at 35% 35%, lighten(@aqua, 50%), 
+          lighten(@aqua, 10%), darken(@blue, 10%), darken(@blue, 45%));
+
+        svg {
+          filter: drop-shadow(2px 2px 3px #555);
+          transform: scale(1.07);
+          // width: 1.6em;
+        }
+      }
+
+      &:active {
+        transform: scale(1);
+        background-image: radial-gradient(at 35% 35%, desaturate(lighten(@aqua, 30%), 20%), 
+          desaturate(@aqua, 10%), darken(@blue, 10%), 
+          desaturate(darken(@blue, 55%), 20%));
+        box-shadow: 1px 1px 2px #fff,
+          inset 2px 2px 4px #333;
+        transition: 0.1s;
+
+        svg {
+          fill: #bbb;
+          transform: scale(1);
+        }
+      }
+    }
 

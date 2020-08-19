@@ -32,9 +32,11 @@ block main
 					h2.slider__head Момент величия
 					p.slider__description Испытай зрелище откола ледников
 					a.slider__link.-blue(href="#") Обзор тура на ледники >
-			.video__toggles-list
+			.video__toggles-list.wrapper
 				.video__toggle-item.-left
+					+svg('#arrow', 'slider-arrowm__icon')
 				.video__toggle-item.-right
+					+svg('#arrow', 'slider-arrowm__icon')
 
 
 	section.proposal
@@ -129,7 +131,10 @@ block main
 							a._answer(href="#") #[span Ответ >]
 						//- ._arrows-wrapper
 						span.advice-slider__arrow.-left
+							+svg('#arrow', 'slider-arrowm__icon')
 						span.advice-slider__arrow.-right
+							+svg('#arrow', 'slider-arrowm__icon')
+
 					._toggles-wrapper
 						span._toggle
 						span._toggle

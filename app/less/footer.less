@@ -26,12 +26,104 @@ footer {
 
 // Видео-блок
 .info-video {
-	iframe {
-		width: 100%; 
-		// height: 600px;
-	}
+	min-width: 320px;
+	.video__list {
+		margin: 0 auto; 
+		.center;
+		position: relative;
 
+		.video__slider-wrapper {
+			position: relative;
+			margin: 0 2em;
+			overflow: hidden;
+			width: 280px;
+			height: 13em;
+			.center;
+// стили для .video__item - в конце с анимацией
+		}
+
+		.info-slider__arrow {
+			right: -0em;
+			.arrow;
+		}
+
+		.info-slider__arrow--left {
+			left: -0em;
+			.reflect-arrow;
+		}
+
+
+	} /// .video__list
+
+} // .info-video
+
+.video__item {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: -100%;	
 }
+// Animation for footer slider:
+
+.showRightButton{
+	animation: showRightButton 1s forwards;
+	display: block;
+}
+.hideRightButton{
+	display: block;
+	animation: hideRightButton 1s forwards;
+}
+.showLeftButton{
+	display: block;
+	animation: showLeftButton 1s forwards;
+}
+.hideLeftButton{
+	display: block;
+	animation: hideLeftButton 1s forwards;
+}
+
+
+@keyframes showRightButton {
+	from {
+		left: -110%;
+	}
+	to {
+		left: 0%;
+		// display: block;
+	}
+}
+@keyframes hideRightButton {
+	from {
+		
+		left: 0%;
+		// display: block;
+	}
+	to {
+		left: 110%;
+		// display: none;
+	}
+}
+@keyframes showLeftButton {
+	from {
+		// display: block;
+		left: 110%;
+	}
+	to {
+		left: 0%;
+	}
+}
+@keyframes hideLeftButton {
+	from {
+		left: 0%;
+	}
+	to {
+		left: -110%;
+	}
+}
+
+
+
 
 // Блок с формой для подписки
 
@@ -75,53 +167,45 @@ footer {
 		}
 		&__submit {
 			cursor: pointer;
+			padding: 0;
 			width: 3em;
 			height: 3em;
 			border-radius: 0.4em;
 			.center;
 			margin-left: 0.5em;
+			position: relative;
 
-			border: 1px solid @aqua;
-			background-color: hsla(0, 0%, 100%, 0.2);
-			.grad(lighten(#1ba15a, 25%), @blue);
-			background-repeat: no-repeat;
-			// background-size: 100% 0%;
-			background-position: 100% 0;
-			text-shadow: 1px 2px 2px #333;
+			border: 0px solid @aqua;
+			.grad(lighten(@blue, 30%), darken(@blue, 10%));
 			box-shadow: 2px 2px 8px #333;
-			border-bottom-color: darken(@blue, 5%);
-			border-right-color: fadeout(@blue, 40%);
 			transition: 0.3s;
-			cursor: pointer;
-			text-transform: uppercase;
+				svg {
+					height: 2.7em;
+					position: absolute;
+					top: 0%;
+				}
 
 			&:hover, &:focus {
-				.grad(lighten(#1ba15a, 30%), darken(@blue, 2%));
+				.grad(lighten(@blue, 37%), darken(@blue, 15%));
 				text-shadow: 1px 2px 2px #222;
 				.sign-form__icon {
 					filter: drop-shadow( 1px 2px 2px #222);
 				}
 				box-shadow: 4px 4px 14px #333;
-				transform: scale(1.02, 1);
+				transform: scale(1.05);
 
 				outline: none;
 			}
 			&:active {
-				.grad(desaturate(lighten(#1ba15a, 30%),60%), darken(@blue, 6%));
-				text-shadow: 1px 1px 1px #bbb;
-				box-shadow: 1px 2px 2px #fff,
-					inset -1px -1px 2px #fff,
-					inset 0px 1px 4px #777,
-					inset 0px -2px 3px darken(@blue, 12%);
-				transform: scale(0.98, 1);
-				border-color: #fff;
-				border-top-color: #555;
-				border-left-color: #555;
+				.grad(desaturate(lighten(@blue, 35%),30%), desaturate(darken(@blue, 15%),30%));
+				box-shadow: inset -1px -1px 2px #fff,
+					inset 2px 2px 4px #333;
+				transform: scale(1);
+				// border-color: #fff;
 				transition: 0.1s;
 
 				.sign-form__icon {
-					fill: #999;
-					filter: drop-shadow(0 1px 1px #000);
+					fill: #bbb;
 				}
 			}
 
@@ -146,6 +230,7 @@ footer {
 
 			.footer__social-icons {
 				fill: @blue;
+				filter: drop-shadow(2px 2px 2px #555);
 				transition: 0.2s;
 			}
 
@@ -165,6 +250,7 @@ footer {
 		}
 	}
 }
+
 
 
 
@@ -275,3 +361,6 @@ footer {
 		}
 	}
 }
+
+
+

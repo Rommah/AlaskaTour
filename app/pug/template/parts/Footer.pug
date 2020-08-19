@@ -4,7 +4,16 @@ footer.footer
 		._info.wrapper
 			.info-video.footer-block
 				h3._heading Посмотри
-				<iframe src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				.video__list
+					.video__slider-wrapper
+						iframe.video__item(src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+						iframe.video__item(src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+						iframe.video__item(src="https://www.youtube.com/embed/gtjdGyBuanE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+					.info-slider__arrow.-right
+						+svg('#arrow', 'slider-arrowm__icon', 50)
+					.info-slider__arrow.-left
+						+svg('#arrow', 'slider-arrowm__icon', 50)
 			
 			.info-connect.footer-block
 				h3._heading Будь вкурсе
@@ -52,3 +61,4 @@ footer.footer
 					a(href="#")._links-item Аляска TOUR & TRAVEL
 
 
+<script src="//www.youtube.com/player_api"></script>
