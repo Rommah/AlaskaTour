@@ -6,8 +6,23 @@ footer.footer
 				h3._heading Посмотри
 				.video__list
 					.video__slider-wrapper
-						iframe.video__item(src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-						iframe.video__item(src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							
+						.site-video__wrapper
+							.site-video__container
+								.video__exit
+									+svg('#cross', '.site-video__close-icon', 50)
+								video.site-video__slide(controls)
+									source(src="video/bears.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+								video.site-video__slide(controls)
+									source(src="video/nothern-light.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+
+						.video__item.site-video
+							+svg('#video', 'video__icon', 100)
+						.video__item.site-video
+							+svg('#video', 'video__icon', 100)
+							
+						//- iframe.video__item(src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
 						iframe.video__item(src="https://www.youtube.com/embed/gtjdGyBuanE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
 					.info-slider__arrow.-right
@@ -15,6 +30,9 @@ footer.footer
 					.info-slider__arrow.-left
 						+svg('#arrow', 'slider-arrowm__icon', 50)
 			
+				//- play video from site
+				
+
 			.info-connect.footer-block
 				h3._heading Будь вкурсе
 				p._sign-text Подпишись на новости
@@ -59,6 +77,7 @@ footer.footer
 				a._links-item(href="#") Карта сайта
 				span._links-item Авторский знак © 2020 • 
 					a(href="#")._links-item Аляска TOUR & TRAVEL
+
 
 
 <script src="//www.youtube.com/player_api"></script>
