@@ -4,3 +4,5 @@ app/images/src/
 node_modules/
 /*.url
 ignore/
+*.ogv
+*.webm

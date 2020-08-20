@@ -10,7 +10,7 @@
 				max-width: 20em;
 				margin: 24px 0;
 				position: relative;
-				z-index: 3;
+				z-index: 15;
 				transition: 0.3s;
 
 				&:hover {
@@ -21,7 +21,7 @@
 	}
 	&__links {
 		background-color: @aqua;
-		.grad3(lighten(@aqua, 20), @aqua);
+		.grad3(lighten(@aqua, 20), darken(@aqua, 10%));
 		.header__links-list {
 			.center;
 			flex-wrap: wrap;
@@ -35,9 +35,9 @@
 				box-shadow: 1px 1px 1px @blue,
 					1px 0px 2px darken(@blue, 27%),
 					-2px 0px 2px lighten(@aqua, 10%),
-					inset 1px 4px 9px darken(@aqua, 1%),
-					inset -3px -4px 10px darken(@aqua, 11%);
-				margin: 2px 2px;
+					inset 4px 5px 9px lighten(@aqua, 12%),
+					inset -4px -7px 10px darken(@aqua, 11%);
+				margin: 3px 2px;
 			
 				.white;
 				.circButton();

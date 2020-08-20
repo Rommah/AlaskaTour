@@ -1190,7 +1190,7 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
   max-width: 20em;
   margin: 24px 0;
   position: relative;
-  z-index: 3;
+  z-index: 15;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1200,8 +1200,8 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
 }
 .header__links {
   background-color: #22abde;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7bcdeb), color-stop(#22abde), to(#7bcdeb));
-  background-image: linear-gradient(to bottom, #7bcdeb, #22abde, #7bcdeb);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7bcdeb), color-stop(#1b89b2), to(#7bcdeb));
+  background-image: linear-gradient(to bottom, #7bcdeb, #1b89b2, #7bcdeb);
 }
 .header__links .header__links-list {
   display: -webkit-box;
@@ -1222,9 +1222,9 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
   font-weight: 500;
   line-height: 3em;
   text-shadow: 1px 1px 2px #333, 0 0 5px #093852;
-  -webkit-box-shadow: 1px 1px 1px #1377ae, 1px 0px 2px #052232, -2px 0px 2px #4ebce5, inset 1px 4px 9px #21a8da, inset -3px -4px 10px #1a86ae;
-          box-shadow: 1px 1px 1px #1377ae, 1px 0px 2px #052232, -2px 0px 2px #4ebce5, inset 1px 4px 9px #21a8da, inset -3px -4px 10px #1a86ae;
-  margin: 2px 2px;
+  -webkit-box-shadow: 1px 1px 1px #1377ae, 1px 0px 2px #052232, -2px 0px 2px #4ebce5, inset 4px 5px 9px #57bfe6, inset -4px -7px 10px #1a86ae;
+          box-shadow: 1px 1px 1px #1377ae, 1px 0px 2px #052232, -2px 0px 2px #4ebce5, inset 4px 5px 9px #57bfe6, inset -4px -7px 10px #1a86ae;
+  margin: 3px 2px;
   color: #fff;
   background-image: radial-gradient(#1377ae 52%, transparent 95%);
   background-position: -100% 100%;
