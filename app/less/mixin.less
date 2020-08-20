@@ -73,6 +73,12 @@
   background-size: cover;
   background-position: center center;
 }
+.coverB(@imgName){
+  background-image: url('../images/dest/@{imgName}');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 .center(){
   display: flex;
   justify-content: center;
@@ -133,6 +139,9 @@
 
 .grad(@color1, @color2, @direction: bottom){
   background-image: linear-gradient(to @direction, @color1, @color2);
+}
+.grad3(@color1, @color2, @direction: bottom){
+  background-image: linear-gradient(to @direction, @color1, @color2, @color1);
 }
 .gradS(@color1; @color2; ...){
   background-image: linear-gradient(@color1, @color2, );
@@ -213,4 +222,48 @@
         }
       }
     }
+
+
+
+// Кнопка на сайте:
+
+.siteBtn(@width: 3em, @height: 3em, @radius: @width / 10, @iconWidth: @width * 0.65) {
+  .aquaB;
+  .center;
+  width: @width;
+  height: @height;
+  border-radius: @radius;
+  box-shadow: 1px 1px 3px #555;
+  cursor: pointer;
+  transition: 0.3s;
+  .grad(lighten(@aqua, 20%), darken(@aqua, 20%));
+
+  svg {
+    fill: #fff;
+    width: @iconWidth;
+    filter: drop-shadow(-1px 1px 2px #555);
+  }
+}
+.siteBtn-hover(@color: @aqua){
+  box-shadow: 2px 2px 5px #555;
+  .grad(lighten(@color, 28%), darken(@color, 28%));
+  svg {
+    filter: drop-shadow(-2px 2px 3px #333);
+  }
+}
+.siteBtn-active(@color: @aqua) {
+  .grad(desaturate(lighten(@color, 20%),30%), desaturate(darken(@color, 35%),30%));
+  box-shadow: 1px 1px 2px #fff,
+    inset 2px 2px 4px #333;
+  transform: scale(0.98, 1);
+  border-color: #fff;
+  border-top-color: #555;
+  border-left-color: #555;
+  transition: 0.1s;
+
+  svg {
+    fill: #bbb;
+    transform: scale(0.96);
+  }
+} 
 
