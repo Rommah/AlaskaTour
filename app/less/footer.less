@@ -64,6 +64,8 @@ footer {
 	position: absolute;
 	left: -100%;	
 }
+
+
 // Animation for footer slider:
 
 .showRightButton{
@@ -122,6 +124,86 @@ footer {
 	}
 }
 
+// отображение видео с сайта:
+.site-video {
+	width: 95%;
+	height: 95%;
+	cursor: pointer;
+	border-radius: 2.3em;
+	box-shadow: 1px 1px 3px #444;
+	transition: 0.3s;
+	.coverB('index-tours-1.jpg');
+	&:nth-child(3){
+		.coverB('index-tours-2.jpg');
+	}
+
+	.video__icon {
+		display: block;
+		width: 5em;
+		margin: 0 auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		fill: @blue;
+		filter: drop-shadow(1px 1px 1px darken(@blue,10%)) drop-shadow(1px 1px 2px #333);
+		transition: 0.2s;
+	}
+	// on .site-video
+	&:hover {
+		box-shadow: 3px 3px 6px #444;
+		.video__icon {
+			transform: translate(-50%, -50%) scale(1.06);
+			fill: lighten(@blue, 16%);
+			filter: drop-shadow(1px 1px 1px darken(@blue,6%))drop-shadow(2px 2px 4px #333);
+		}
+	}
+	&:active {
+
+		.video__icon {
+			transform: translate(-50%, -50%) scale(0.98);
+			fill: darken(@blue, 5%);
+			filter: drop-shadow(1px 1px 1px #444);
+			transition: 0.1s;
+		}
+	}
+}
+.site-video__wrapper {
+	.center;
+	position: fixed;
+	top: 0;left: 0;right: 0;bottom: 0;
+	z-index: 10;
+	background-color: fadeout(black, 5%);
+	height: 100vh;
+	width: 100wh;
+	display: none;
+	.site-video__container {
+		position: relative;
+		
+		.video__exit {
+			.siteBtn;
+			position: absolute;
+			// top: 0;
+			left: 100%;
+			&:hover {
+				.siteBtn-hover;
+			}
+			&:active {
+				.siteBtn-active;
+			}
+		}
+
+	}   //.site-video__container
+
+}  // .site-video__wrapper
+.site-video__slide{
+	width: 60wh;
+	height: 60vh;
+	display: none;
+}
+.show-video {
+	display: flex;
+}
 
 
 
@@ -262,7 +344,9 @@ footer {
 		color: #333;
 		line-height: 1.6;
 	}
-
+	&__link-list {
+		white-space: nowrap;
+	}
 	&__link-item {
 		text-transform: uppercase;
 		color: @aqua;
