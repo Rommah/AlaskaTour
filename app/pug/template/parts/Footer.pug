@@ -7,21 +7,19 @@ footer.footer
 				.video__list
 					.video__slider-wrapper
 							
-						.site-video__wrapper
-							.site-video__container
-								.video__exit
-									+svg('#cross', '.site-video__close-icon', 50)
-								video.site-video__slide(controls)
-									source(src="video/bears.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
-								video.site-video__slide(controls)
-									source(src="video/nothern-light.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
-
 						.video__item.site-video
 							+svg('#video', 'video__icon', 100)
-						.video__item.site-video
-							+svg('#video', 'video__icon', 100)
-							
-						//- iframe.video__item(src="https://www.youtube.com/embed/iIst68UhODc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+							img(src='images/dest/index-tours-1.jpg')
+							.site-video__wrapper
+								.site-video__container
+									.video__exit
+										+svg('#cross', '.site-video__close-icon', 50)
+									video.site-video__slide(controls)
+										source(src="video/bears.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+										source(src="video/bears.webm" type='video/webm; codecs="vp8, vorbis"')
+										source(src="video/bears.ogv" type='video/ogg; codecs="theora, vorbis"')
+						
+						+siteVideo('nothern-light', 'index-tours-6.jpg')
 
 						iframe.video__item(src="https://www.youtube.com/embed/gtjdGyBuanE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
@@ -30,7 +28,6 @@ footer.footer
 					.info-slider__arrow.-left
 						+svg('#arrow', 'slider-arrowm__icon', 50)
 			
-				//- play video from site
 				
 
 			.info-connect.footer-block
@@ -80,4 +77,4 @@ footer.footer
 
 
 
-<script src="//www.youtube.com/player_api"></script>
+//- <script src="//www.youtube.com/player_api"></script>

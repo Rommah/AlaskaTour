@@ -672,7 +672,7 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
     left: -110%;
   }
   to {
-    left: 0%;
+    left: calc(0% + 3px);
   }
 }
 @keyframes showRightButton {
@@ -680,7 +680,7 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
     left: -110%;
   }
   to {
-    left: 0%;
+    left: calc(0% + 3px);
   }
 }
 @-webkit-keyframes hideRightButton {
@@ -704,7 +704,7 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
     left: 110%;
   }
   to {
-    left: 0%;
+    left: calc(0% + 3px);
   }
 }
 @keyframes showLeftButton {
@@ -712,7 +712,7 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
     left: 110%;
   }
   to {
-    left: 0%;
+    left: calc(0% + 3px);
   }
 }
 @-webkit-keyframes hideLeftButton {
@@ -732,24 +732,27 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
   }
 }
 .site-video {
-  width: 95%;
+  width: calc(100% - 6px);
   height: 95%;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.site-video img {
   border-radius: 2.3em;
   -webkit-box-shadow: 1px 1px 3px #444;
           box-shadow: 1px 1px 3px #444;
+  max-width: 100%;
+  max-height: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: url('../images/dest/index-tours-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-.site-video:nth-child(3) {
-  background-image: url('../images/dest/index-tours-2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 .site-video .video__icon {
   display: block;
@@ -767,7 +770,7 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-.site-video:hover {
+.site-video:hover img {
   -webkit-box-shadow: 3px 3px 6px #444;
           box-shadow: 3px 3px 6px #444;
 }
@@ -876,7 +879,6 @@ footer .footer__info-wrapper .footer__info .contacts__heading:after {
 .site-video__slide {
   width: 60wh;
   height: 60vh;
-  display: none;
 }
 .show-video {
   display: -webkit-box;

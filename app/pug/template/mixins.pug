@@ -2,3 +2,18 @@
 mixin svg(symbolId, svgClass, svgWidth=100, svgHeight=svgWidth)
 	svg(class=svgClass width=svgWidth height=svgHeight)
 		use(href=symbolId)
+
+mixin siteVideo(video, img, videoClass='site-video')
+	div(class='video__item '+videoClass)
+		+svg('#video', 'video__icon', 100)
+		img(src='images/dest/'+img)
+		.site-video__wrapper
+			.site-video__container
+				.video__exit
+					+svg('#cross', '.site-video__close-icon', 50)
+				video.site-video__slide(controls)
+					source(src="video/"+video+".mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+					source(src="video/"+video+".webm" type='video/webm; codecs="vp8, vorbis"')
+					source(src="video/"+video+".ogv" type='video/ogg; codecs="theora, vorbis"')
+
+
