@@ -1,13 +1,18 @@
 .tour-variants {
 	background-image: url(../images/dest/index-tours-bg.png);
 	background-repeat: no-repeat;
-	background-size: cover;
 	padding-top: 3em;
 	margin-top: -50px;
 	position: relative;
 	z-index: 3;
 	padding-top: 4em;
 	padding-bottom: 2.4em;
+
+	background-size: cover;
+
+	.max600({
+		background-size: 100%;
+		});
 	.tour {
 		&__head {
 			.mons9;
@@ -22,6 +27,10 @@
 			grid-gap: 35px;
 			// justify-content: space-between;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+			.max1000({
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				});
 			.tour__item-link {
 				position: relative;
 						
@@ -47,8 +56,6 @@
 				// justify-content: space-between;
 				// flex-grow: 1;
 				.white;
-				// .orangeB;
-				// background-color: #aaa;
 				.tour__item-head {
 					.aquaB;
 					.mons9;
@@ -71,8 +78,6 @@
 						background-image: linear-gradient( transparent 30%, 
 							fadeout(@aqua,10%) , transparent 70%);
 						position: absolute;
-						// top: 50%;
-						// bottom: 0;
 						left: -120%;
 						transform: skewX(15deg);
 					}
@@ -82,8 +87,6 @@
 						width: 60%;
 						height: 330%;
 						
-						// background-color: green;
-						// background-image: linear-gradient(to left, 
 						// 	transparent, fadeout(@aqua,10%), transparent);
 						background-image: linear-gradient(transparent, 
 							fadeout(@aqua, 50%) , transparent, 

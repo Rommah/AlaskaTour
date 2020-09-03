@@ -11,31 +11,45 @@
   </head>
   <body>
     <header class="header">
-      <section class="header__logotype">
-        <div class="header__logo-wrapper wrapper"> <a class="logo__link" href="#"><img class="logo__link__img" src="images/dest/logo.png" alt="Логотип"></a></div>
-      </section>
       <nav class="header__links">
-        <div class="header__links-list wrapper"><a class="header__link-item" href="#">Направления</a><a class="header__link-item" href="#">Каникулы</a><a class="header__link-item" href="#">Жильё</a><a class="header__link-item" href="#">Список дел</a><a class="header__link-item" href="#">Транспорт</a><a class="header__link-item" href="#">Круизы</a><a class="header__link-item" href="#">Планирование поездки</a></div>
+        <div class="logo-menu-wrapper">
+          <div class="header__logo-wrapper wrapper"> <a class="logo__link" href="#"><img class="logo__link__img" src="images/dest/logo.png" alt="Логотип"></a></div>
+          <div class="header__menu-button"> <span class="menu-text">Menu</span>
+            <svg class="nav__menu-icon menu-icon--arrow menu-icon--shown" width="32" height="32">
+              <use href="#arrow"></use>
+            </svg>
+            <svg class="nav__menu-icon menu-icon--cross" width="22" height="22">
+              <use href="#cross"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="header__links-wrapper">
+          <div class="header__links-list wrapper">
+            <div class="nav__list nav__list--left"><a class="nav__link-item" href="#">Направления</a><a class="nav__link-item" href="#">Каникулы</a><a class="nav__link-item" href="#">Жильё</a><a class="nav__link-item" href="#">Список дел</a></div>
+            <div class="nav__list nav__list--right"><a class="nav__link-item" href="#">Транспорт</a><a class="nav__link-item" href="#">Круизы</a><a class="nav__link-item" href="#">Планирование поездки</a></div>
+          </div>
+          <section class="header__contacts-wrapper">
+            <div class="header__logo-contacts wrapper"><a class="contacts__link" href="#">
+                <svg class="contacts__icon" width="24" height="24">
+                  <use href="#phone"></use>
+                </svg>800-208-0200</a><a class="contacts__link" href="#">
+                <svg class="contacts__icon" width="38" height="31">
+                  <use href="#book"></use>
+                </svg>брошюра</a><a class="contacts__link" href="#">
+                <svg class="contacts__icon" width="31" height="31">
+                  <use href="#letter"></use>
+                </svg>контакт</a><a class="contacts__link" href="#">
+                <svg class="contacts__icon" width="28" height="28">
+                  <use href="#search"></use>
+                </svg></a><a class="contacts__link contacts__link--cart" href="#">
+                <svg class="contacts__icon" width="31" height="31">
+                  <use href="#suitcase"></use>
+                </svg>
+                <p class="contact__text--cart">Моя поездка <span class="in-cart">(0)</span></p></a></div>
+          </section>
+        </div>
       </nav>
     </header>
-    <section class="header__contacts-wrapper">
-      <div class="header__logo-contacts wrapper"><a class="contacts__link" href="#">
-          <svg class="contacts__icon" width="24" height="24">
-            <use href="#phone"></use>
-          </svg>800-208-0200</a><a class="contacts__link" href="#">
-          <svg class="contacts__icon" width="38" height="31">
-            <use href="#book"></use>
-          </svg>брошюра</a><a class="contacts__link" href="#">
-          <svg class="contacts__icon" width="31" height="31">
-            <use href="#letter"></use>
-          </svg>контакт</a><a class="contacts__link" href="#">
-          <svg class="contacts__icon" width="28" height="28">
-            <use href="#search"></use>
-          </svg></a><a class="contacts__link contacts__link--cart" href="#">
-          <svg class="contacts__icon" width="31" height="31">
-            <use href="#suitcase"></use>
-          </svg>Моя поездка <span class="in-cart">(0)</span></a></div>
-    </section>
     <h1 class="visually-hidden">Туры Аляска</h1>
     <section class="video__slider">
       <div class="video__slider-wrapper">
@@ -133,9 +147,11 @@
     <section class="features wrapper">
       <article class="features__whyUs">
         <h3 class="features__heading">Почему мы</h3>
-        <p class="features__item"><img class="whyUs__image" src="images/dest/trip-advisor.jpg" alt="Tripadise"><span class="whyUs__text">900+ 5-звездочных отзывов на TripAdvisor.</span></p>
-        <p class="features__item"><img class="whyUs__image" src="images/dest/bbb.jpg" alt="BBB"><span class="whyUs__text">Рейтинг А + на BBB Аляски.</span></p>
-        <p class="features__item"><img class="whyUs__image" src="images/dest/suitcase.png" alt="suitcase"><span class="whyUs__text">250 000+ поездок, запланированных за последние 25 лет.</span></p><a class="features__link" href="#">Ещё 7 причин ></a>
+        <div class="features__item-list">
+          <p class="features__item"><img class="whyUs__image" src="images/dest/trip-advisor.jpg" alt="Tripadise"><span class="whyUs__text">900+ 5-звездочных отзывов на TripAdvisor.</span></p>
+          <p class="features__item"><img class="whyUs__image" src="images/dest/bbb.jpg" alt="BBB"><span class="whyUs__text">Рейтинг А + на BBB Аляски.</span></p>
+          <p class="features__item"><img class="whyUs__image" src="images/dest/suitcase.png" alt="suitcase"><span class="whyUs__text">250 000+ поездок, запланированных за последние 25 лет.</span></p>
+        </div><a class="features__link" href="#">Ещё 7 причин ></a>
       </article>
       <article class="features-advice">
         <h3 class="features-advice__heading">Совет эксперта</h3>
@@ -199,8 +215,9 @@
             </div>
           </div>
           <form class="choise-form">
-            <fildset class="choise-form__fieldset">
-              <div class="choise-form__input-field" tabindex="0">Длительность путешествия 
+            <fildset class="choise-form__fieldset choise-form__fieldset--grid">
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Длительность путешествия </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">1-2 дня</li>
                   <li class="choise-form__option-item">2-3 дня</li>
@@ -212,7 +229,8 @@
                   <li class="choise-form__option-item">9-10 дней</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0"> Город отправления <br>
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text"> Город отправления </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Анкоридж</li>
                   <li class="choise-form__option-item">Фэйрбэнк</li>
@@ -221,14 +239,16 @@
                   <li class="choise-form__option-item">Уиттер</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Транспорт 
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Транспорт </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Поездом</li>
                   <li class="choise-form__option-item">На автобусе</li>
                   <li class="choise-form__option-item">Арендовать автомобиль</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Город прибытия 
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Город прибытия </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Анкоридж</li>
                   <li class="choise-form__option-item">Фэйрбэнк</li>
@@ -239,7 +259,8 @@
               </div>
             </fildset>
             <fildset class="choise-form__fieldset">
-              <div class="choise-form__input-field" tabindex="0">Место 
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Место </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Анкоридж</li>
                   <li class="choise-form__option-item">Посадка Купера</li>
@@ -256,17 +277,34 @@
                   <li class="choise-form__option-item">Вальдез</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Дата 
-                <input class="choise-form__input" type="date">
+              <div class="choise-form__input-field choise-form__input-field--datepicker">  
+                <p class="input__date">Дата заезда</p>
+                <input class="datepicker" type="text" value="" size="10" onclick="xCal(this) " onkeyup="xCal()">
               </div>
-              <div class="choise-form__input-field" tabindex="0">Количество ночей <br>
-                <select class="choise-form__selection" id="lodgingNights">
-                  <input class="choise-form__input" type="number">
-                </select>
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Количество ночей</p>
+                <ul class="choise-form__option-list">
+                  <li class="choise-form__option-item">1 ночь</li>
+                  <li class="choise-form__option-item">2 ночи</li>
+                  <li class="choise-form__option-item">3 ночи</li>
+                  <li class="choise-form__option-item">4 ночи</li>
+                  <li class="choise-form__option-item">5 ночей</li>
+                  <li class="choise-form__option-item">6 ночей</li>
+                  <li class="choise-form__option-item">7 ночей</li>
+                  <li class="choise-form__option-item">8 ночей</li>
+                  <li class="choise-form__option-item">9 ночей</li>
+                  <li class="choise-form__option-item">10 ночей</li>
+                  <li class="choise-form__option-item">11 ночей</li>
+                  <li class="choise-form__option-item">12 ночей</li>
+                  <li class="choise-form__option-item">13 ночей</li>
+                  <li class="choise-form__option-item">14 ночей</li>
+                  <li class="choise-form__option-item">15 ночей</li>
+                </ul>
               </div>
             </fildset>
             <fildset class="choise-form__fieldset">
-              <div class="choise-form__input-field" tabindex="0">Место
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Место</p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Анкоридж</li>
                   <li class="choise-form__option-item">Посадка Купера</li>
@@ -284,7 +322,8 @@
                   <li class="choise-form__option-item">Виттер</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Вид отдыха 
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Вид отдыха </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Тур по Полярному кругу</li>
                   <li class="choise-form__option-item">Атракционы</li>
@@ -313,12 +352,14 @@
                   <li class="choise-form__option-item">Зиплайн тур</li>
                 </ul>
               </div>
-              <label class="choise-form__label" for="activityDate">Дата <br>
-                <input class="choise-form__input" id="activityDate" type="date">
-              </label>
+              <div class="choise-form__input-field choise-form__input-field--datepicker">  
+                <p class="input__date"> Дата</p>
+                <input class="datepicker" type="text" value="" size="10" onclick="xCal(this)" onkeyup="xCal()">
+              </div>
             </fildset>
             <fildset class="choise-form__fieldset">
-              <div class="choise-form__input-field" tabindex="0">Город отправления
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Город отправления</p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Анкоридж</li>
                   <li class="choise-form__option-item">Парк Дэнели</li>
@@ -328,7 +369,8 @@
                   <li class="choise-form__option-item">Уиттер</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Город прибытия 
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Город прибытия </p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Анкоридж</li>
                   <li class="choise-form__option-item">Парк Дэнели</li>
@@ -338,12 +380,14 @@
                   <li class="choise-form__option-item">Уиттер</li>
                 </ul>
               </div>
-              <label class="choise-form__label" for="transportDate">Дата <br>
-                <input class="choise-form__input" id="transportDate" type="date">
-              </label>
+              <div class="choise-form__input-field choise-form__input-field--datepicker">  
+                <p class="input__date"> Дата</p>
+                <input class="datepicker" type="text" value="" size="10" onclick="xCal(this)" onkeyup="xCal()">
+              </div>
             </fildset>
             <fildset class="choise-form__fieldset">
-              <div class="choise-form__input-field" tabindex="0">Месяц тура
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Месяц тура</p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Апрель</li>
                   <li class="choise-form__option-item">Май</li>
@@ -353,7 +397,8 @@
                   <li class="choise-form__option-item">Сентябрь</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Компания
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Компания</p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Знаменитые круизы</li>
                   <li class="choise-form__option-item">Голандская Америка</li>
@@ -363,7 +408,8 @@
                   <li class="choise-form__option-item">Океан викингов</li>
                 </ul>
               </div>
-              <div class="choise-form__input-field" tabindex="0">Маршрут
+              <div class="choise-form__input-field" tabindex="0"> 
+                <p class="input__text">Маршрут</p>
                 <ul class="choise-form__option-list">
                   <li class="choise-form__option-item">Вокруг Сиетла</li>
                   <li class="choise-form__option-item">Вокруг Ванкувера</li>
@@ -375,12 +421,14 @@
               </div>
             </fildset>
             <fildset class="choise-form__fieldset">
-              <input class="choise-form__search-input" type="search" placeholder="Поиск">
+              <input class="choise-form__input-field choise-form__input-field--search-input" type="search" placeholder="Поиск">
             </fildset>
             <input class="choise-form__submit-button" type="submit" value="Результат">
           </form>
         </div>
-        <p class="book__notice">Забронируйте сейчас без риска , ваш депозит полностью возвращается за 45 дней до поездки. <a class="notice__link" href="#">Узнать больше></a></p>
+        <div class="book__notice"> 
+          <p class="book__notice-text">Забронируйте сейчас без риска , ваш депозит полностью возвращается за 45 дней до поездки. <a class="notice__link" href="#">Узнать больше></a></p>
+        </div>
       </div>
     </section>
     <footer class="footer">
@@ -453,19 +501,19 @@
                 </svg>
               </button>
             </form>
-            <div class="info-connect__social-buttons"><a class="info-connect__social-link" href="#">facebook
+            <div class="info-connect__social-buttons"><a class="info-connect__social-link" href="#"> <span>facebook</span>
                 <svg class="footer__social-icons" width="40" height="40">
                   <use href="#facebook"></use>
-                </svg></a><a class="info-connect__social-link" href="#">instagram
+                </svg></a><a class="info-connect__social-link" href="#"> <span>instagram</span>
                 <svg class="footer__social-icons" width="40" height="40">
                   <use href="#instagram"></use>
-                </svg></a><a class="info-connect__social-link" href="#">flickr
+                </svg></a><a class="info-connect__social-link" href="#"> <span>flickr</span>
                 <svg class="footer__social-icons" width="40" height="40">
                   <use href="#flickr"></use>
-                </svg></a><a class="info-connect__social-link" href="#">youtube
+                </svg></a><a class="info-connect__social-link" href="#"> <span>youtube</span>
                 <svg class="footer__social-icons" width="40" height="40">
                   <use href="#youtube"></use>
-                </svg></a><a class="info-connect__social-link" href="#">tripadvisor
+                </svg></a><a class="info-connect__social-link" href="#"> <span>tripadvisor</span>
                 <svg class="footer__social-icons" width="52" height="52">
                   <use href="#tripadvisor"></use>
                 </svg></a>
@@ -473,8 +521,10 @@
           </div>
           <div class="contacts footer-block">
             <h3 class="contacts__heading">Контакты</h3>
-            <p class="contacts__item"><b>Alaska Tour & Travel</b><br>3900 Арктический бул., Ste 304<br>Анкоридж, AK 99503<br>800-208-0200 или 907-245-0200</p>
-            <div class="contacts__link-list"><a class="contacts__link-item" href="#">Карта</a><a class="contacts__link-item" href="#">О нас</a><a class="contacts__link-item last" href="#">Контакты</a></div>
+            <div class="contacts__wrapper">
+              <p class="contacts__item"><b>Alaska Tour & Travel</b><br>3900 Арктический бул., Ste 304<br>Анкоридж, AK 99503<br>800-208-0200 или 907-245-0200</p>
+              <div class="contacts__link-list"><a class="contacts__link-item" href="#">Карта</a><a class="contacts__link-item" href="#">О нас</a><a class="contacts__link-item last" href="#">Контакты</a></div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,8 +1,7 @@
-
-app/images/dest/
+dist/
 app/images/src/
 node_modules/
-/*.url
 ignore/
+/*.url
 *.ogv
 *.webm

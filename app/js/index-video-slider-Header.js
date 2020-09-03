@@ -4,8 +4,6 @@ const videoSlide = document.querySelectorAll('.video__slider-item'),
 	nextVideoSlide = document.querySelector('.video__toggle-item--right');
 
 
-console.log(videoSlide);
-
 let currentVideoSlide = 0;
 videoSlide[currentVideoSlide].classList.add('video__slider-item--show');
 

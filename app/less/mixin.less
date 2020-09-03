@@ -12,6 +12,51 @@
   font-style: @style;
 }
 
+.min1000(@rules) {
+  @media (min-width: 1001px) { @rules(); };
+};
+.min1050(@rules) {
+  @media (min-width: 1050px) { @rules(); };
+};
+.min1100(@rules) {
+  @media (min-width: 1101px) { @rules(); };
+};
+
+
+.max350(@rules) {
+  @media (max-width: 350px) { @rules(); };
+};
+.max450(@rules) {
+  @media (max-width: 450px) { @rules(); };
+};
+.max500(@rules) {
+  @media (max-width: 500px) { @rules(); };
+};
+.max550(@rules) {
+  @media (max-width: 550px) { @rules(); };
+};
+.max600(@rules) {
+  @media (max-width: 600px) { @rules(); };
+};
+.max700(@rules) {
+  @media (max-width: 700px) { @rules(); };
+};
+.max800(@rules) {
+  @media (max-width: 800px) { @rules(); };
+};
+.max900(@rules) {
+  @media (max-width: 900px) { @rules(); };
+};
+.max1000(@rules) {
+  @media (max-width: 1000px) { @rules(); };
+};
+.max1050(@rules) {
+  @media (max-width: 1050px) { @rules(); };
+};
+.max1100(@rules) {
+  @media (max-width: 1100px) { @rules(); };
+};
+
 .mons() {
   font-family: Montserrat, Arial, sans-serif;
 }
@@ -57,6 +102,12 @@
   font-family: 'Ubuntu', Arial, sans-serif;
   font-style: italic;
   font-weight: 700;
+}
+
+// Grid:
+
+.col(@rule){
+  grid-template-columns: @rule;
 }
 
 .krug() {
@@ -140,8 +191,8 @@
 .grad(@color1, @color2, @direction: bottom){
   background-image: linear-gradient(to @direction, @color1, @color2);
 }
-.grad3(@color1, @color2, @direction: bottom){
-  background-image: linear-gradient(to @direction, @color1, @color2, @color1);
+.grad3(@color1, @color2, @color3: @color1, @direction: bottom){
+  background-image: linear-gradient(to @direction, @color1, @color2, @color3);
 }
 .gradS(@color1; @color2; ...){
   background-image: linear-gradient(@color1, @color2, );
@@ -191,7 +242,6 @@
         width: @svgWidth;
         fill: white;
         filter: drop-shadow(1px 1px 1px #888);
-
       }
 
       &:hover {

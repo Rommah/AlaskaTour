@@ -1,7 +1,9 @@
 include indexBook
 footer.footer
+
 	section._info-wrapper
 		._info.wrapper
+
 			.info-video.footer-block
 				h3._heading Посмотри
 				.video__list
@@ -39,31 +41,38 @@ footer.footer
 						+svg('#arrow', 'sign-form__icon')
 				._social-buttons
 					- var iconWidth = 40; //- width of social-icons
-					a(href="#")._social-link facebook
+					a(href="#")._social-link 
+						span facebook
 						+svg('#facebook',"footer__social-icons", iconWidth)
-					a(href="#")._social-link instagram
+					a(href="#")._social-link 
+						span instagram
 						+svg('#instagram',"footer__social-icons", iconWidth)
-					a(href="#")._social-link flickr
+					a(href="#")._social-link 
+						span flickr
 						+svg('#flickr',"footer__social-icons", iconWidth)
-					a(href="#")._social-link youtube
+					a(href="#")._social-link 
+						span youtube
 						+svg('#youtube',"footer__social-icons", iconWidth)
-					a(href="#")._social-link tripadvisor
+					a(href="#")._social-link 
+						span tripadvisor
 						+svg('#tripadvisor',"footer__social-icons", iconWidth * 1.3)
 			
 			.contacts.footer-block
 				h3._heading Контакты
-				p._item
-					b Alaska Tour & Travel
-					br
-					| 3900 Арктический бул., Ste 304
-					br
-					| Анкоридж, AK 99503
-					br
-					| 800-208-0200 или 907-245-0200
-				._link-list
-					a(href="#")._link-item Карта
-					a(href="#")._link-item О нас
-					a(href="#")._link-item.last Контакты
+				._wrapper
+					p._item
+						b Alaska Tour & Travel
+						br
+						| 3900 Арктический бул., Ste 304
+						br
+						| Анкоридж, AK 99503
+						br
+						| 800-208-0200 или 907-245-0200
+					._link-list
+						a(href="#")._link-item Карта
+						a(href="#")._link-item О нас
+						a(href="#")._link-item.last Контакты
+					
 	section.additional-links
 		._wrapper.wrapper
 			a.button-up(href="#")

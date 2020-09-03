@@ -1,16 +1,50 @@
 footer {
 
+	.max900({
+		font-size: 90%;
+		});
+
 	.footer__info-wrapper {
 		background-color: @bodyColor;
+
+		.max1000({
+			font-size: 90%;
+			});
+
+
 
 		.footer__info {
 			display: flex;
 			justify-content: space-between;
 
+			.max800({
+				flex-direction: column;
+				align-items: center;
+				padding: 0 4em;
+			});
+			.max450({
+				padding: 0 2em;
+				});
+			.max350({
+				padding: 0;
+				});
+
 			//отдельные блоки
 			.footer-block{
 				flex-grow: 1;
 				padding: 2em;
+
+				.max1000({
+					padding: 1em;
+					});
+				.max900({
+					flex-grow: 0;
+					});
+				.max800({
+					// justify-content: center;
+					max-width: 100%;
+					width: 34em;
+				});
 			}
 
 			// Заголовки
@@ -27,6 +61,9 @@ footer {
 // Видео-блок
 .info-video {
 	min-width: 320px;
+	.max1000({
+		min-width: 34%;
+		});
 	.video__list {
 		margin: 0 auto; 
 		.center;
@@ -39,17 +76,33 @@ footer {
 			width: 280px;
 			height: 13em;
 			.center;
+
+			.max1000({
+				width: 100%;
+				});
+			.max800({
+				height: 18em;
+				});
+			.max350({
+				height: 14em;
+				});
 // стили для .video__item - в конце с анимацией
 		}
 
 		.info-slider__arrow {
 			right: -0em;
 			.arrow;
+			.max1000({
+				right: -1em;
+				});
 		}
 
 		.info-slider__arrow--left {
 			left: -0em;
 			.reflect-arrow;
+			.max1000({
+				left: -1em;
+				});
 		}
 
 
@@ -126,15 +179,23 @@ footer {
 
 // отображение видео с сайта:
 .site-video {
-	width: calc(100% - 6px);
-	height: 95%;
+	width: calc(100% - 8px);
+	height: 93%;
 	cursor: pointer;
 	.center;
+
+	border-radius: 2.3em;
+	background-color: fadeout(darken(@aqua, 20%), 35%);
+	overflow: hidden;
+	box-shadow: 1px 1px 3px #444;
+	transition: 0.3s;
+
 	img {
-		border-radius: 2.3em;
-		box-shadow: 1px 1px 3px #444;
-		max-width: 100%;
-		max-height: 100%;
+		// border-radius: 2.3em;
+		// box-shadow: 1px 1px 3px #444;
+		// max-width: 100%;
+		// max-height: 100%;
+		object-fit: cover;
 		transition: 0.3s;
 	}
 
@@ -152,8 +213,9 @@ footer {
 	}
 	// on .site-video
 	&:hover {
-		img {
 		box-shadow: 3px 3px 6px #444;
+		img {
+		// box-shadow: 3px 3px 6px #444;
 		}
 		.video__icon {
 			transform: translate(-50%, -50%) scale(1.06);
@@ -178,7 +240,7 @@ footer {
 	z-index: 10;
 	background-color: fadeout(black, 5%);
 	height: 100vh;
-	width: 100wh;
+	width: 100vw;
 	display: none;
 	.site-video__container {
 		position: relative;
@@ -188,6 +250,12 @@ footer {
 			position: absolute;
 			// top: 0;
 			left: 100%;
+
+			.max700({
+				// left: auto;
+				top: 3em;
+				// right: 0;
+				});
 			&:hover {
 				.siteBtn-hover;
 			}
@@ -200,8 +268,9 @@ footer {
 
 }  // .site-video__wrapper
 .site-video__slide{
-	width: 60wh;
+	width: 60vw;
 	height: 60vh;
+	// max-width: 80%;
 	// display: none;
 }
 .show-video {
@@ -253,7 +322,7 @@ footer {
 		&__submit {
 			cursor: pointer;
 			padding: 0;
-			width: 3em;
+			min-width: 3em;
 			height: 3em;
 			border-radius: 0.4em;
 			.center;
@@ -307,16 +376,29 @@ footer {
 	&__social-buttons {
 		.center;
 		margin-top: 0.5em;
+		.max1000({
+			justify-content: space-around;
+			padding: 0.2em 2em;
+			});
 
 		.info-connect__social-link {
-			font-size: 0;
-			margin: 5px;
 			transition: 0.3s;
+			width: 4em;
+			.max1000({
+				// margin: 0.5em;
+				});
+			span {
+				font-size: 0;
+				position: absolute;
+				text-indent: 900px;
+				width: 0;
+			}
 
 			.footer__social-icons {
 				fill: @blue;
 				filter: drop-shadow(2px 2px 2px #555);
 				transition: 0.2s;
+				width: 100%;
 			}
 
 			&:hover {
@@ -342,6 +424,21 @@ footer {
 // Блок с контактами
 .contacts {
 
+	.center;
+	flex-direction: column;
+	justify-content: start;
+
+	&__heading {
+		align-self: stretch;
+	}
+
+	&__wrapper {
+		// display: inline-block;
+		// margin:  auto;
+		// .center;
+		// flex-direction: column;
+	}
+
 	&__item {
 		font-size: 1.3em;
 		color: #333;
@@ -349,6 +446,7 @@ footer {
 	}
 	&__link-list {
 		white-space: nowrap;
+		// align-self: flex-start;
 	}
 	&__link-item {
 		text-transform: uppercase;
@@ -356,10 +454,19 @@ footer {
 		font-size: 1.2em;
 		transition: 0.3s;
 
+		.max1000({
+			font-size: 1.1em;
+			});
+
 		&:not(:last-child) {
 			margin-right: 1em;
 			padding-right: 1em;
-			border-right: 1px solid fadeout(@aqua, 70%)
+			border-right: 1px solid fadeout(@aqua, 70%);
+
+			.max1000({
+				margin-right: 0.5em;
+				padding-right: 0.5em;
+				});
 		}
 		&:hover {
 			color: @blue;
@@ -378,7 +485,7 @@ footer {
 	.blueB;
 
 	&__wrapper {
-		height: 5em;
+		min-height: 5em;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -387,6 +494,19 @@ footer {
 			text-transform: uppercase;
 			.white;
 			font-size: 0.85em;
+			display: inline-flex;
+			.max800({
+				justify-content: center;
+				flex-wrap: wrap;
+				});
+			.max350({
+				flex-direction: column;
+				height: auto;
+				align-items: center;
+				padding: 0.4em 0;
+				});
+
+
 
 			.additional-links__links-item {
 				.white;
@@ -394,8 +514,17 @@ footer {
 				&:not(:last-child) {
 				margin-right: 1em;
 				padding-right: 1em;
-				border-right: 1px solid fadeout(@aqua, 70%)					
+				border-right: 1px solid fadeout(@aqua, 70%);	
+
+				.max350({
+					border-right: 0 solid #000;
+					});				
 				}
+
+				.max800({
+					margin: 0.5em;
+					border: none;
+					});
 
 				&:hover:not(span) {
 					color: lighten(@aqua, 20%);
@@ -407,7 +536,7 @@ footer {
 		.button-up {
 			.aquaB;
 			.center;
-			width: 3em;
+			min-width: 3em;
 			height: 3em;
 			border-radius: 0.3em;
 			box-shadow: 1px 1px 3px #555;

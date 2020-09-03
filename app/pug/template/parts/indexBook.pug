@@ -28,8 +28,10 @@ section.book-wrapper
 						p._type-description Поиск
 
 			form.choise-form
-				fildset._fieldset
-					._input-field(tabindex=0) Длительность путешествия 
+				fildset._fieldset.-grid
+					
+					._input-field(tabindex=0) 
+						p.input__text Длительность путешествия 
 						ul._option-list
 							li._option-item 1-2 дня
 							li._option-item 2-3 дня
@@ -39,29 +41,23 @@ section.book-wrapper
 							li._option-item 7-8 дней
 							li._option-item 8-9 дней
 							li._option-item 9-10 дней
-						//- select._selection#days
-						//- 	option._select-option(value='1') 1-2 дня
-						//- 	option._select-option(value='2') 2-3 дня
-						//- 	option._select-option(value='3') 3-4 дня
-						//- 	option._select-option(value='4') 4-5 дней
-						//- 	option._select-option(value='5') 6-7 дней
-						//- 	option._select-option(value='6') 7-8 дней
-						//- 	option._select-option(value='7') 8-9 дней
-						//- 	option._select-option(value='8') 9-10 дней
-					._input-field(tabindex=0)  Город отправления #[br]
+					._input-field(tabindex=0)  
+						p.input__text  Город отправления 
 						ul._option-list
 							li._option-item Анкоридж
 							li._option-item Фэйрбэнк
 							li._option-item Гридвуд
 							li._option-item Сивард
 							li._option-item Уиттер
-							
-					._input-field(tabindex=0) Транспорт 
+					
+					._input-field(tabindex=0)  
+						p.input__text Транспорт 
 						ul._option-list
 							li._option-item Поездом
 							li._option-item На автобусе
 							li._option-item Арендовать автомобиль
-					._input-field(tabindex=0) Город прибытия 
+					._input-field(tabindex=0)  
+						p.input__text Город прибытия 
 						ul._option-list
 							li._option-item Анкоридж
 							li._option-item Фэйрбэнк
@@ -70,7 +66,8 @@ section.book-wrapper
 							li._option-item Уиттер
 
 				fildset._fieldset
-					._input-field(tabindex=0) Место 
+					._input-field(tabindex=0)  
+						p.input__text Место 
 						ul._option-list
 							li._option-item Анкоридж
 							li._option-item Посадка Купера
@@ -86,15 +83,32 @@ section.book-wrapper
 							li._option-item Талкетна
 							li._option-item Вальдез
 
-					._input-field(tabindex=0) Дата 
-						input._input(type="date")
+					._input-field.-datepicker   
+						p.input__date Дата заезда
+						input(type="text"  value="" size="10" onclick="xCal(this) "  onkeyup="xCal()" ).datepicker
 
-					._input-field(tabindex=0) Количество ночей #[br]
-						select._selection#lodgingNights
-							input._input(type="number")
+					._input-field(tabindex=0)  
+						p.input__text Количество ночей
+						ul._option-list
+							li._option-item 1 ночь
+							li._option-item 2 ночи
+							li._option-item 3 ночи
+							li._option-item 4 ночи
+							li._option-item 5 ночей
+							li._option-item 6 ночей
+							li._option-item 7 ночей
+							li._option-item 8 ночей
+							li._option-item 9 ночей
+							li._option-item 10 ночей
+							li._option-item 11 ночей
+							li._option-item 12 ночей
+							li._option-item 13 ночей
+							li._option-item 14 ночей
+							li._option-item 15 ночей
 
 				fildset._fieldset
-					._input-field(tabindex=0) Место
+					._input-field(tabindex=0)  
+						p.input__text Место
 						ul._option-list
 							li._option-item Анкоридж
 							li._option-item Посадка Купера
@@ -111,7 +125,8 @@ section.book-wrapper
 							li._option-item Вальдез
 							li._option-item Виттер
 
-					._input-field(tabindex=0) Вид отдыха 
+					._input-field(tabindex=0)  
+						p.input__text Вид отдыха 
 						ul._option-list
 							li._option-item Тур по Полярному кругу
 							li._option-item Атракционы
@@ -139,11 +154,13 @@ section.book-wrapper
 							li._option-item Тур по дикой природе и заповедникам
 							li._option-item Зиплайн тур
 
-					label._label(for='activityDate') Дата #[br]
-						input._input#activityDate(type="date")
+					._input-field.-datepicker   
+						p.input__date  Дата
+						input(type="text" value="" size="10" onclick="xCal(this)" onkeyup="xCal()").datepicker
 
 				fildset._fieldset
-					._input-field(tabindex=0) Город отправления
+					._input-field(tabindex=0)  
+						p.input__text Город отправления
 						ul._option-list
 							li._option-item Анкоридж
 							li._option-item Парк Дэнели
@@ -152,7 +169,8 @@ section.book-wrapper
 							li._option-item Талкитна
 							li._option-item Уиттер
 
-					._input-field(tabindex=0) Город прибытия 
+					._input-field(tabindex=0)  
+						p.input__text Город прибытия 
 						ul._option-list
 							li._option-item Анкоридж
 							li._option-item Парк Дэнели
@@ -161,11 +179,13 @@ section.book-wrapper
 							li._option-item Талкитна
 							li._option-item Уиттер
 
-					label._label(for='transportDate') Дата #[br]
-						input._input#transportDate(type="date")
+					._input-field.-datepicker   
+						p.input__date  Дата
+						input(type="text" value="" size="10" onclick="xCal(this)"  onkeyup="xCal()").datepicker
 
 				fildset._fieldset
-					._input-field(tabindex=0) Месяц тура
+					._input-field(tabindex=0)  
+						p.input__text Месяц тура
 						ul._option-list
 							li._option-item Апрель
 							li._option-item Май
@@ -174,7 +194,8 @@ section.book-wrapper
 							li._option-item Август
 							li._option-item Сентябрь
 
-					._input-field(tabindex=0) Компания
+					._input-field(tabindex=0)  
+						p.input__text Компания
 						ul._option-list
 							li._option-item Знаменитые круизы
 							li._option-item Голандская Америка
@@ -183,7 +204,8 @@ section.book-wrapper
 							li._option-item Королевские Карибы
 							li._option-item Океан викингов
 
-					._input-field(tabindex=0) Маршрут
+					._input-field(tabindex=0)  
+						p.input__text Маршрут
 						ul._option-list
 							li._option-item Вокруг Сиетла
 							li._option-item Вокруг Ванкувера
@@ -193,148 +215,9 @@ section.book-wrapper
 							li._option-item Из Уиттера в Ванкувер
 
 				fildset._fieldset
-					input._search-input(type="search" placeholder="Поиск")
+					input._input-field.-search-input(type="search" placeholder="Поиск")
 
-				//- 	label._label(for='cityStart') Город отправления #[br]
-				//- 		select._selection#cityStart
-				//- 			option._select-option(value='anchorage') Анкоридж
-				//- 			option._select-option(value='fairbanks') Фэйрбэнк
-				//- 			option._select-option(value='gridwood') Гридвуд
-				//- 			option._select-option(value='seaward') Сивард
-				//- 			option._select-option(value='whitter') Уиттер
-				//- 			br
-				//- 	label._label(for='transport') Транспорт #[br]
-				//- 		select._selection#transport
-				//- 			option._select-option(value="rail") Поездом
-				//- 			option._select-option(value="bus") На автобусе
-				//- 			option._select-option(value="rentCar") Арендовать автомобиль
-				//- 	label._label(for='destination') Город прибытия #[br]
-				//- 		select._selection#destination
-				//- 			option._select-option(value='anchorage') Анкоридж
-				//- 			option._select-option(value='fairbanks') Фэйрбэнк
-				//- 			option._select-option(value='gridwood') Гридвуд
-				//- 			option._select-option(value='seaward') Сивард
-				//- 			option._select-option(value='whitter') Уиттер
-				//- 	br
-				//- fildset._fieldset
-				//- 	label._label(for='lodgingCity') Место #[br]
-				//- 		select._selection#lodgingCity
-				//- 			option._select-option(value="Ancorage") Анкоридж
-				//- 			option._select-option(value="Cooper Landing") Посадка Купера
-				//- 			option._select-option(value="Cooper center") Центр Купера
-				//- 			option._select-option(value="Denali Park") Парк Денали
-				//- 			option._select-option(value="Fairbanks") Фэирбэнкс
-				//- 			option._select-option(value="Gridwood") Гридвуд
-				//- 			option._select-option(value="Homer") Гомер
-				//- 			option._select-option(value="cannacot-mccarthy") Кэннекот МакКарти
-				//- 			option._select-option(value="Palmer") Палмер
-				//- 			option._select-option(value="Seward") Севард
-				//- 			option._select-option(value="Soldotna") Солдотна
-				//- 			option._select-option(value="Talketna") Талкетна
-				//- 			option._select-option(value="Valdez") Вальдез
-				//- 	br
-				//- 	label._label(for='lodgingDate') Дата #[br]
-				//- 		input._input(type="date")
-				//- 	br
-				//- 	label._label(for='lodgingNights') Количество ночей #[br]
-				//- 		select._selection#lodgingNights
-				//- 			input._input(type="number")
-				//- fildset._fieldset
-				//- 	label._label(for='activityCity') Место #[br]
-				//- 		select._selection#activityCity
-				//- 			option._select-option(value="Ancorage") Анкоридж
-				//- 			option._select-option(value="Cooper Landing") Посадка Купера
-				//- 			option._select-option(value="Cooper center") Центр Купера
-				//- 			option._select-option(value="Denali Park") Парк Денали
-				//- 			option._select-option(value="Fairbanks") Фэирбэнкс
-				//- 			option._select-option(value="Gridwood") Гридвуд
-				//- 			option._select-option(value="Homer") Гомер
-				//- 			option._select-option(value="cannacot-mccarthy") Кэннекот МакКарти
-				//- 			option._select-option(value="Palmer") Палмер
-				//- 			option._select-option(value="Seward") Севард
-				//- 			option._select-option(value="Spencer stop") Остановка ледника Спенсера
-				//- 			option._select-option(value="Talketna") Талкетна
-				//- 			option._select-option(value="Valdez") Вальдез
-				//- 			option._select-option(value="Whittier") Виттер
-				//- 	label._label(for='activityType') Вид отдыха #[br]
-				//- 		select._selection#activityType
-				//- 			option._select-option(value="Arctic Circle Tours") Тур по Полярному кругу
-				//- 			option._select-option(value="Attractions") Атракционы
-				//- 			option._select-option(value="Bear Viewing Tours") Тур наблюдения за медведями
-				//- 			option._select-option(value="Bike Tours") Поездка на велосипедах
-				//- 			option._select-option(value="Bus Tours") Поездка на автобусе
-				//- 			option._select-option(value="Day Cruises") Дневной круиз
-				//- 			option._select-option(value="Dinner Theaters") Ресторан-театр
-				//- 			option._select-option(value="Dog Sled Tours") Тур на собачьих упряжках
-				//- 			option._select-option(value="Fishing Trips") Рыболовное путешествие
-				//- 			option._select-option(value="Flightseeing Tours") Обзорный полёт
-				//- 			option._select-option(value="Glacier Tours") Тур на ледники
-				//- 			option._select-option(value="Gold Panning") Добыча золота
-				//- 			option._select-option(value="Hiking Tours") Пеший тур
-				//- 			option._select-option(value="Jeep & ATV Tours") Тур на внедорожниках
-				//- 			option._select-option(value="Jet Boat Tours") Тур на реактивных катерах
-				//- 			option._select-option(value="Kayaking Trips") Сплав на каяках
-				//- 			option._select-option(value="Museums") Музеи
-				//- 			option._select-option(value="Native Culture") Местная культура
-				//- 			option._select-option(value="Rafting Trips") Рафтинг
-				//- 			option._select-option(value="Riverboat Cruises") Круиз на речном судне
-				//- 			option._select-option(value="Salmon Bakes") Салмон Бэйкс
-				//- 			option._select-option(value="Sightseeing Tours") Тур по окрестностям
-				//- 			option._select-option(value="Train Day Trips") Дневной тур на поезде
-				//- 			option._select-option(value="Wildlife Tours & Park") Тур по дикой природе и заповедникам
-				//- 			option._select-option(value="Zip Line Tours") Зиплайн тур
-				//- 		br
-				//- 	label._label(for='activityDate') Дата #[br]
-				//- 		input._input#activityDate(type="date")
-
-				//- fildset._fieldset
-				//- 	label._label(for='transportStart') Город отправления #[br]
-				//- 		select._selection#transportStart
-				//- 			option._select-option(value='anchorage') Анкоридж
-				//- 			option._select-option(value='Denali Park') Парк Дэнели
-				//- 			option._select-option(value='fairbanks') Фэйрбэнкс
-				//- 			option._select-option(value='seaward') Сивард
-				//- 			option._select-option(value='Talkeetna') Талкитна
-				//- 			option._select-option(value='whitter') Уиттер
-				//- 	label._label(for='transportDestination') Город прибытия #[br]
-				//- 		select._selection#transportDestination
-				//- 			option._select-option(value='anchorage') Анкоридж
-				//- 			option._select-option(value='Denali Park') Парк Дэнели
-				//- 			option._select-option(value='fairbanks') Фэйрбэнкс
-				//- 			option._select-option(value='seaward') Сивард
-				//- 			option._select-option(value='Talkeetna') Талкитна
-				//- 			option._select-option(value='whitter') Уиттер
-				//- 	br
-				//- 	label._label(for='transportDate') Дата #[br]
-				//- 		input._input#transportDate(type="date")
-
-				//- fildset._fieldset
-				//- 	select._selection(name="cruise-date")
-				//- 		option._select-option(value="" selected) Месяц тура
-				//- 		option._select-option(value="april") Апрель
-				//- 		option._select-option(value="may") Май
-				//- 		option._select-option(value="june") Июнь
-				//- 		option._select-option(value="jule") Июль
-				//- 		option._select-option(value="augest") Август
-				//- 		option._select-option(value="september") Сентябрь
-				//- 	select._selection(name="cruise-company")
-				//- 		option._select-option(value="" selected) Компания
-				//- 		option._select-option(value="Celebrity Cruises") Знаменитые круизы
-				//- 		option._select-option(value="Holland America") Голандская Америка
-				//- 		option._select-option(value="Norwegian Cruise Line") Норвежские круизные линии
-				//- 		option._select-option(value="Princess Cruises") Круизы принцессы
-				//- 		option._select-option(value="Royal Caribbean") Королевские Карибы
-				//- 		option._select-option(value="Viking Ocean Cruises") Океан викингов
-				//- 	br
-				//- 	select._selection(name="cruise-route")
-				//- 		option._select-option(value="") Маршрут
-				//- 		option._select-option(value="round-trip-seattle") Вокруг Сиетла
-				//- 		option._select-option(value="round-trip-vancouver") Вокруг Ванкувера
-				//- 		option._select-option(value="seward-to-vancouver") Из Севарда в Ванкувер
-				//- 		option._select-option(value="vancouver-to-seward") Из Ванкувера в Севард
-				//- 		option._select-option(value="vancouver-to-whittier") Из Ванкувера в Уиттер
-				//- 		option._select-option(value="whittier-to-vancouver") Из Уиттера в Ванкувер
-				//- fildset._fieldset
-				//- 	input._search-input(type="search" placeholder="Поиск")
 				input._submit-button(type="submit" value="Результат")
-		p._notice Забронируйте сейчас без риска , ваш депозит полностью возвращается за 45 дней до поездки. #[a.notice__link(href="#") Узнать больше>]
+		._notice 
+			p._notice-text Забронируйте сейчас без риска , ваш депозит полностью возвращается за 45 дней до поездки. #[a.notice__link(href="#") Узнать больше>]
+
