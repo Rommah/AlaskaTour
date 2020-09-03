@@ -1,5 +1,5 @@
 dist/
-app/images/
+app/images/*
 !app/images/dest/
 node_modules/
 ignore/
