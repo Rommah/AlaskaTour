@@ -1,5 +1,6 @@
 dist/
-app/images/src/
+app/images/
+!app/images/dest
 node_modules/
 ignore/
 /*.url
